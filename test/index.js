@@ -20,11 +20,11 @@ test('isRegisteredSymbol', function (t) {
 	});
 
 	t.test('symbols', { skip: !hasSymbols }, function (st) {
-		forEach(v.symbols, function (uniqueSymbol) {
+		forEach(v.symbols.concat(v.wellKnownSymbols), function (nonRegSymbol) {
 			st.equal(
-				isRegisteredSymbol(uniqueSymbol),
+				isRegisteredSymbol(nonRegSymbol),
 				false,
-				inspect(uniqueSymbol) + ' is not a registered Symbol'
+				inspect(nonRegSymbol) + ' is not a registered Symbol'
 			);
 		});
 
