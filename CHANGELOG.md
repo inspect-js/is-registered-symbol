@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.1](https://github.com/inspect-js/is-registered-symbol/compare/v1.0.0...v1.0.1) - 2022-04-24
+
+### Commits
+
+- [readme] fix version badge [`452a25e`](https://github.com/inspect-js/is-registered-symbol/commit/452a25eae9a8e2cff94ffa1fd7c18989a7576ed8)
+
 ## v1.0.0 - 2022-04-24
 
 ### Commits
