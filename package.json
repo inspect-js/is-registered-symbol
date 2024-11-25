@@ -43,7 +43,7 @@
 	},
 	"homepage": "https://github.com/inspect-js/is-registered-symbol#readme",
 	"dependencies": {
-		"call-bind": "^1.0.2",
+		"call-bind": "^1.0.7",
 		"is-symbol": "^1.0.4"
 	},
 	"devDependencies": {
