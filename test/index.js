@@ -12,7 +12,11 @@ test('isRegisteredSymbol', function (t) {
 	t.equal(typeof isRegisteredSymbol, 'function', 'is a function');
 
 	t.test('non-symbols', function (st) {
-		forEach(v.nonSymbolPrimitives.concat(v.objects), function (nonSymbol) {
+		forEach([].concat(
+			// @ts-expect-error TS sucks with concat
+			v.nonSymbolPrimitives,
+			v.objects
+		), function (nonSymbol) {
 			st.equal(isRegisteredSymbol(nonSymbol), false, inspect(nonSymbol) + ' is not a Symbol');
 		});
 
