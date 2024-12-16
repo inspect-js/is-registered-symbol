@@ -44,14 +44,13 @@
 	},
 	"homepage": "https://github.com/inspect-js/is-registered-symbol#readme",
 	"dependencies": {
-		"call-bind": "^1.0.7",
+		"call-bound": "^1.0.3",
 		"is-symbol": "^1.0.4"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.0",
 		"@ljharb/eslint-config": "^21.1.1",
 		"@ljharb/tsconfig": "^0.2.0",
-		"@types/call-bind": "^1.0.5",
 		"@types/for-each": "^0.3.3",
 		"@types/has-symbols": "^1.0.2",
 		"@types/is-symbol": "^1.0.2",
