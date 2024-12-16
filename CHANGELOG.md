@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.1](https://github.com/inspect-js/is-registered-symbol/compare/v1.1.0...v1.1.1) - 2024-12-16
+
+### Commits
+
+- [Refactor] use `call-bound` directly [`27b443f`](https://github.com/inspect-js/is-registered-symbol/commit/27b443f65db1ef16107d5ae17087e96bdc447548)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/tsconfig`, `@types/tape`, `has-symbols` [`5d1b2a4`](https://github.com/inspect-js/is-registered-symbol/commit/5d1b2a4829d2dfa2714ab0513d0781922eacce02)
+- [Deps] update `is-symbol` [`bf37c2f`](https://github.com/inspect-js/is-registered-symbol/commit/bf37c2ffec4025bc0f27a1fc35c67bbd1c00e81a)
+
 ## [v1.1.0](https://github.com/inspect-js/is-registered-symbol/compare/v1.0.1...v1.1.0) - 2024-11-25
 
 ### Commits
