@@ -24,11 +24,19 @@ test('isRegisteredSymbol', function (t) {
 	});
 
 	t.test('symbols', { skip: !hasSymbols }, function (st) {
-		forEach(v.symbols.concat(v.wellKnownSymbols), function (nonRegSymbol) {
+		forEach(v.unregisteredSymbols.concat(v.wellKnownSymbols), function (nonRegSymbol) {
 			st.equal(
 				isRegisteredSymbol(nonRegSymbol),
 				false,
 				inspect(nonRegSymbol) + ' is not a registered Symbol'
+			);
+		});
+
+		forEach(v.registeredSymbols, function (regSymbol) {
+			st.equal(
+				isRegisteredSymbol(regSymbol),
+				true,
+				inspect(regSymbol) + ' is a registered Symbol'
 			);
 		});
 
