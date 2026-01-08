@@ -5,6 +5,7 @@ var forEach = require('for-each');
 var hasSymbols = require('has-symbols')();
 var inspect = require('object-inspect');
 var v = require('es-value-fixtures');
+var semver = require('semver');
 
 var isRegisteredSymbol = require('../');
 
@@ -25,11 +26,25 @@ test('isRegisteredSymbol', function (t) {
 
 	t.test('symbols', { skip: !hasSymbols }, function (st) {
 		forEach(v.unregisteredSymbols.concat(v.wellKnownSymbols), function (nonRegSymbol) {
-			st.equal(
-				isRegisteredSymbol(nonRegSymbol),
-				false,
-				inspect(nonRegSymbol) + ' is not a registered Symbol'
-			);
+			if (
+				semver.satisfies(process.version, '^18 || 20 || 21 || 22')
+				&& (
+					nonRegSymbol === Symbol.dispose
+					|| nonRegSymbol === Symbol.asyncDispose
+				)
+			) {
+				st.equal(
+					isRegisteredSymbol(nonRegSymbol),
+					true,
+					inspect(nonRegSymbol) + ' is a registered Symbol, but SHOULD NOT BE - a node flaw'
+				);
+			} else {
+				st.equal(
+					isRegisteredSymbol(nonRegSymbol),
+					false,
+					inspect(nonRegSymbol) + ' is not a registered Symbol'
+				);
+			}
 		});
 
 		forEach(v.registeredSymbols, function (regSymbol) {
